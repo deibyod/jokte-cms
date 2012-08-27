@@ -221,7 +221,7 @@ div#content div div.cols-3 div.item p {
 
 
 .moduletable {
-    margin:5px;
+    margin: 15px 5px;
     overflow:hidden;
 }
  .moduletable .menu{
@@ -497,10 +497,11 @@ span.highlight {
     text-decoration: underline;
 }
 /*login*/
+/*
 #modlgn-passwd, #modlgn-username {
- 
     width: 45%;
 }
+*/
 #form-login-remember {
     display: block;
     text-align: left;
@@ -1033,7 +1034,7 @@ box-shadow: -1px -2px 3px #FFFFFF, 3px 5px 10px #CCCCCC, 6px 0 25px #EEEEEE;
 background:#fff;
 }
 .moduletable.caja{
-padding: 5px 15px 20px !important;
+  padding: 20px !important;
 }
 .moduletable.caja1 {
     padding: 5px 15px 20px !important;

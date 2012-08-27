@@ -37,22 +37,22 @@ JHtml::_('behavior.keepalive');
 		</div>
 	<?php endif; ?>
 	<fieldset class="userdata">
-	<div id="form-login-username">
+	<div class="form-fields">
 		<label for="modlgn-username"><?php echo JText::_('MOD_LOGIN_VALUE_USERNAME') ?></label>
 		<input id="modlgn-username" type="text" name="username" class="inputbox"  size="18" />
 	</div>
-	<div id="form-login-password">
+	<div class="form-fields">
 		<label for="modlgn-passwd"><?php echo JText::_('JGLOBAL_PASSWORD') ?></label>
 		<input id="modlgn-passwd" type="password" name="password" class="inputbox" size="18"  />
 	</div>
 	<?php if (JPluginHelper::isEnabled('system', 'remember')) : ?>
-	<div id="form-login-remember">
+	<div class="form-fields">
 		<label for="modlgn-remember"><?php echo JText::_('MOD_LOGIN_REMEMBER_ME') ?></label>
 		<input id="modlgn-remember" type="checkbox" name="remember" class="inputbox" value="yes"/>
 	</div>
 	<?php endif; ?>
-        <div id="form-controls">
-            <input type="submit" name="Submit" class="button" value="<?php echo JText::_('JLOGIN') ?>" />
+        <div class="form-controls">
+            <button type="submit" class="button" name="Submit"><?php echo JText::_('JLOGIN'); ?></button>
             <input type="hidden" name="option" value="com_users" />
             <input type="hidden" name="task" value="user.login" />
             <input type="hidden" name="return" value="<?php echo $return; ?>" />
