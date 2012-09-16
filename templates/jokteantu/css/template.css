@@ -991,7 +991,26 @@ margin-top:10px;
 }
 .button2-left a:hover, .button2-right a:hover{
 color:#333;}
+
 /*****Contacto*****/
+/* Información 
+ */
+#contact-slider {
+  float: left;
+  width: 100%;
+}
+
+.contact .tabs {
+  margin: 0;
+}
+
+.contact .contact-info {
+  padding-left: 195px;
+}
+
+.contact .contact-image {
+  float: left;
+}
 .contact dt {
     float: left;
 }
@@ -1033,15 +1052,14 @@ color:#333;}
 .contact-links ul, ol .contact-articles,.contact-miscinfo {
     clear: both;
     display: block;
-    line-height: 1.6em;
+    line-height: 16px;
     list-style: none outside none;
     padding: 15px 0;
 }
 .jicons-icons {
-    display: block;
-    width: 12px;
     float: left;
-    margin: 15px -20px 0 -30px;
+    margin: 0 10px 0 0;
+    line-height: 15px;
 }
 #contact-form dt {
     float: none;

@@ -46,18 +46,19 @@ $cparams = JComponentHelper::getParams ('com_media');
 	<?php if ($this->params->get('presentation_style')=='plain'):?>
 		<?php  echo '<h3>'. JText::_('COM_CONTACT_DETAILS').'</h3>';  ?>
 	<?php endif; ?>
+    <div id="cls"></div>
 	<?php if ($this->contact->image && $this->params->get('show_image')) : ?>
 		<div class="contact-image">
 			<?php echo JHtml::_('image', $this->contact->image, JText::_('COM_CONTACT_IMAGE_DETAILS'), array('align' => 'middle')); ?>
 		</div>
 	<?php endif; ?>
+    <div class="contact-info">
+        <?php if ($this->contact->con_position && $this->params->get('show_position')) : ?>
+            <p class="contact-position"><?php echo $this->contact->con_position; ?></p>
+        <?php endif; ?>
 
-	<?php if ($this->contact->con_position && $this->params->get('show_position')) : ?>
-		<p class="contact-position"><?php echo $this->contact->con_position; ?></p>
-	<?php endif; ?>
-
-	<?php echo $this->loadTemplate('address'); ?>
-
+        <?php echo $this->loadTemplate('address'); ?>
+    </div>
 	<?php if ($this->params->get('allow_vcard')) :	?>
 		<?php echo JText::_('COM_CONTACT_DOWNLOAD_INFORMATION_AS');?>
 			<a href="<?php echo JRoute::_('index.php?option=com_contact&amp;view=contact&amp;id='.$this->contact->id . '&amp;format=vcf'); ?>">
@@ -102,10 +103,10 @@ $cparams = JComponentHelper::getParams ('com_media');
 			<?php echo '<h3>'. JText::_('COM_CONTACT_OTHER_INFORMATION').'</h3>'; ?>
 		<?php endif; ?>
 				<div class="contact-miscinfo">
-					<div class="<?php echo $this->params->get('marker_class'); ?>">
-						<?php echo $this->params->get('marker_misc'); ?>
-					</div>
 					<div class="contact-misc">
+                        <div class="<?php echo $this->params->get('marker_class'); ?>">
+                            <?php echo $this->params->get('marker_misc'); ?>
+                        </div>
 						<?php echo $this->contact->misc; ?>
 					</div>
 				</div>
