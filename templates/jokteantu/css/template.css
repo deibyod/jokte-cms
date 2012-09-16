@@ -901,7 +901,30 @@ fieldset {
 }
 
 .form-controls {
+  margin-top: 10px;
   text-align: right;
+}
+
+/* FIXME: Este selector hace override al selector .contact .validate 
+ * el cual  no se toca para no afectar otros formularios que
+ * den uso del mismo
+ */
+.form-controls > .button {
+  margin: 0 !important;
+}
+
+.form-controls .check-send-email {
+  float: right;
+  line-height: 28px;
+}
+
+.check-send-email label, .check-send-email input {
+  float: left;
+  width: auto;
+}
+
+.check-send-email input {
+  margin: 8px;
 }
 
 fieldset {
@@ -919,16 +942,22 @@ label {
     float: left;
     width: 20% ;
 }
-input {
+input, textarea {
     background: none repeat scroll 0 0 #EEEEEE;
     border: 0;
     display: block;
     margin-bottom: 10px;
     width: 80%;
 }
+
+textarea {
+    background: #eee;
+}
+
 select {
     border: 1px solid transparent;
 }
+
 button {
     cursor: pointer;
     display: inline;
@@ -936,11 +965,6 @@ button {
     margin: 10px 5px;
     text-transform: uppercase;
    
-}
-textarea {
-    border: 1px solid transparent;
-    background: #eee;
-    width: 70%;
 }
 
 .formelm-button buttom{
@@ -989,6 +1013,9 @@ color:#333;}
     margin-top: 10px;
 }
 
+/* Comento los siguientes selectores para que las propiedades
+ * del formulario apliquen sobre el elemento adecuadamente
+
 #jform_contact_email_copy-lbl,#jform_contact_email_copy {
     float: right;
     margin-top: 15px;
@@ -996,6 +1023,8 @@ color:#333;}
 #jform_contact_email_copy-lbl {
     margin-right: 14%;
 }
+*/
+
 .contact .open a {
     color: #666;
     text-decoration: underline;

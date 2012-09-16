@@ -20,19 +20,24 @@ JHtml::_('behavior.tooltip');
 	<form id="contact-form" action="<?php echo JRoute::_('index.php'); ?>" method="post" class="form-validate">
 		<fieldset>
 			<legend><?php echo JText::_('COM_CONTACT_FORM_LABEL'); ?></legend>
-			<dl>
-				<dt><?php echo $this->form->getLabel('contact_name'); ?></dt>
-				<dd><?php echo $this->form->getInput('contact_name'); ?></dd>
-				<dt><?php echo $this->form->getLabel('contact_email'); ?></dt>
-				<dd><?php echo $this->form->getInput('contact_email'); ?></dd>
-				<dt><?php echo $this->form->getLabel('contact_subject'); ?></dt>
-				<dd><?php echo $this->form->getInput('contact_subject'); ?></dd>
-				<dt><?php echo $this->form->getLabel('contact_message'); ?></dt>
-				<dd><?php echo $this->form->getInput('contact_message'); ?></dd>
-				<?php 	if ($this->params->get('show_email_copy')){ ?>
-						<dt><?php echo $this->form->getLabel('contact_email_copy'); ?></dt>
-						<dd><?php echo $this->form->getInput('contact_email_copy'); ?></dd>
-				<?php 	} ?>
+                <div class="form-fields">
+                    <?php echo $this->form->getLabel('contact_name') ?>
+                    <?php echo $this->form->getInput('contact_name') ?>
+                </div>
+                <div class="form-fields">
+                    <?php echo $this->form->getLabel('contact_email') ?>
+                    <?php echo $this->form->getInput('contact_email') ?>
+                </div>
+                <div class="form-fields">
+                    <?php echo $this->form->getLabel('contact_subject') ?>
+                    <?php echo $this->form->getInput('contact_subject') ?>
+                </div>
+                <div class="form-fields">
+                    <?php echo $this->form->getLabel('contact_message') ?>
+                    <?php echo $this->form->getInput('contact_message') ?>
+                </div>
+                <div id="cls"></div>
+			<div class="form-controls">
 			<?php //Dynamically load any additional fields from plugins. ?>
 			     <?php foreach ($this->form->getFieldsets() as $fieldset): ?>
 			          <?php if ($fieldset->name != 'contact'):?>
@@ -41,26 +46,30 @@ JHtml::_('behavior.tooltip');
 			                    <?php if ($field->hidden): ?>
 			                         <?php echo $field->input;?>
 			                    <?php else:?>
-			                         <dt>
-			                            <?php echo $field->label; ?>
+			                         <div class="form-fields">
 			                            <?php if (!$field->required && $field->type != "Spacer"): ?>
-			                               <span class="optional"><?php echo JText::_('COM_CONTACT_OPTIONAL');?></span>
+			                               <span class="optional-field"><?php echo JText::_('COM_CONTACT_OPTIONAL');?></span>
 			                            <?php endif; ?>
-			                         </dt>
-			                         <dd><?php echo $field->input;?></dd>
+			                            <?php echo $field->label; ?>
+                                        <?php echo $field->input;?>
+                                     </div>
 			                    <?php endif;?>
 			               <?php endforeach;?>
 			          <?php endif ?>
 			     <?php endforeach;?>
-				<dt></dt>
-				<dd><button class="button validate" type="submit"><?php echo JText::_('COM_CONTACT_CONTACT_SEND'); ?></button>
-					<input type="hidden" name="option" value="com_contact" />
-					<input type="hidden" name="task" value="contact.submit" />
-					<input type="hidden" name="return" value="<?php echo $this->return_page;?>" />
-					<input type="hidden" name="id" value="<?php echo $this->contact->slug; ?>" />
-					<?php echo JHtml::_( 'form.token' ); ?>
-				</dd>
-			</dl>
+				<button class="button validate" type="submit"><?php echo JText::_('COM_CONTACT_CONTACT_SEND'); ?></button>
+				<?php 	if ($this->params->get('show_email_copy')){ ?>
+                    <div class="check-send-email">
+                        <?php echo $this->form->getLabel('contact_email_copy'); ?>
+                        <?php echo $this->form->getInput('contact_email_copy'); ?>
+                    </div>
+				<?php 	} ?>
+				<input type="hidden" name="option" value="com_contact" />
+				<input type="hidden" name="task" value="contact.submit" />
+				<input type="hidden" name="return" value="<?php echo $this->return_page;?>" />
+				<input type="hidden" name="id" value="<?php echo $this->contact->slug; ?>" />
+				<?php echo JHtml::_( 'form.token' ); ?>
+			</div>
 		</fieldset>
 	</form>
 </div>
