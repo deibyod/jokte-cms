@@ -51,14 +51,15 @@ JHtml::_('behavior.keepalive');
 		<input id="modlgn-remember" type="checkbox" name="remember" class="inputbox" value="yes"/>
 	</div>
 	<?php endif; ?>
-        <div class="form-controls">
-            <button type="submit" class="button" name="Submit"><?php echo JText::_('JLOGIN'); ?></button>
-            <input type="hidden" name="option" value="com_users" />
-            <input type="hidden" name="task" value="user.login" />
-            <input type="hidden" name="return" value="<?php echo $return; ?>" />
-            <?php echo JHtml::_('form.token'); ?>
-        </div>
     </fieldset>
+    <div class="form-controls">
+        <button type="submit" class="button" name="Submit"><?php echo JText::_('JLOGIN'); ?></button>
+        <input type="hidden" name="option" value="com_users" />
+        <input type="hidden" name="task" value="user.login" />
+        <input type="hidden" name="return" value="<?php echo $return; ?>" />
+        <?php echo JHtml::_('form.token'); ?>
+    </div>
+    <div id="cls"></div>
 	<ul>
 		<li>
 			<a href="<?php echo JRoute::_('index.php?option=com_users&view=reset'); ?>">

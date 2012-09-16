@@ -517,7 +517,8 @@ span.highlight {
     text-align: right;
     list-style: none;
     font-size: .8em;
-    margin: 0 12px;
+    padding: 0;
+    margin: 0;
 }
 #login-form ul  a{
 color:#AE0C0C;}
