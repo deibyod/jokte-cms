@@ -1995,11 +1995,35 @@ select#lang {
 	height: 0;
 }
 
-#form-login .button-holder {
-	float: right;
-	padding-right: 5px;
-	clear: right;
-	margin-top: 10px;
+.form-controls {
+  text-align: right;
+}
+
+#form-login .button {
+  line-height: 8px;
+  font-family: FreeSans, Verdana, Geneva, Helvetica, Arial, Sans-Serif;
+  background: url("../images/leer-mas.png") no-repeat 100% 50% #ddd !important ;
+  padding: 8px 35px 8px 5px;
+  float: right;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  font-size:0.7em;
+  max-width:30%;
+  transition: all 0.8s linear .1s;
+  -moz-transition: all 0.8s linear .1s;
+  -webkit-transition: all 0.8s linear .1s;
+  -o-transition: all 0.8s linear .1s;
+  -ms-transition: all 0.8s linear .1s;
+}
+
+#form-login .button:hover {
+  background: url("../images/leer-mas-h.png") no-repeat 100% 50% #444 !important ;
+  color:#fff;
+  transition: all 0.8s linear .1s;
+  -moz-transition: all 0.8s linear .1s;
+  -webkit-transition: all 0.8s linear .1s;
+  -o-transition: all 0.8s linear .1s;
+  -ms-transition: all 0.8s linear .1s;
 }
 
 /* -- JGRID STYLES ----------------------------- */
