@@ -7,12 +7,12 @@
 
 html {
     height: 100%;
+    background-color: #F7F7F7;
 }
 
 body {
     margin: 10px;
     padding: 0;
-    background: #fff;
     height: 100%;
     padding-bottom: 1px;
     min-width: 960px;
@@ -85,10 +85,14 @@ div#cls_style {
 }
 
 #header {
+    background: #fff;
     height: 54px;
     width: 800px;
     margin: 30px auto 10px auto;
     border-bottom: 1px solid #bbb;
+    box-shadow: -1px -2px 3px #FFFFFF, 3px 5px 10px #DDB3B9, 6px 0 15px #EEEEEE;
+    -moz-box-shadow: -1px -2px 3px #FFFFFF, 3px 5px 10px #DDB3B9, 6px 0 15px #EEEEEE;
+    -webkit-box-shadow: -1px -2px 3px #FFFFFF, 3px 5px 10px #DDB3B9, 6px 0 15px #EEEEEE;
 }
 
 #header h1 {
@@ -96,7 +100,7 @@ div#cls_style {
     padding: 0px 0px 0px 10px;
     margin: 0px;
     float: left;
-    color: #000;
+    color: #c00;
 }
 
 #header h2 {
@@ -126,8 +130,12 @@ div#cls_style {
 }
 
 #content-pad {
+    background: #fff;
     padding: 0px 10px 0px 10px;
-    min-height: 370px;
+    min-height: 350px;
+    box-shadow: -1px -2px 3px #FFFFFF, 3px 5px 10px #CCCCCC, 6px 0 15px #EEEEEE;
+    -moz-box-shadow: -1px -2px 3px #FFFFFF, 3px 5px 10px #CCCCCC, 6px 0 15px #EEEEEE;
+    -webkit-box-shadow: -1px -2px 3px #FFFFFF, 3px 5px 10px #CCCCCC, 6px 0 15px #EEEEEE;
 }
 
 #stepbar {
@@ -443,6 +451,7 @@ input.hidden {
 
 div#installer {
     padding: 10px;
+    margin-top: 5px;
     margin-bottom: 30px;
     color: #888;
 }

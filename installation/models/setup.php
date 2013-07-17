@@ -154,7 +154,7 @@ class JInstallationModelSetup extends JModelLegacy
 		$native = JLanguageHelper::detectLanguage();
 
 		if (empty($native)) {
-			$native = 'en-GB';
+			$native = 'es-ES';
 		}
 
 		// Get a forced language if it exists.
