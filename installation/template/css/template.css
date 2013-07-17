@@ -418,7 +418,6 @@ div.moofx-slider {
 
 .final-table {
     text-align: center;
-    margin-top: 90px;
     margin-right: 20px;
 }
 
@@ -459,13 +458,11 @@ div#installer {
 div#installer .m {
     text-align: center;
     font-size: 16px;
-    margin-bottom: 30px;
 }
 
 div#installer div.m {
     text-align: left !important;
     font-size: 16px;
-    margin-bottom: 30px;
 }
 
 div#installer div.m div.lang {
