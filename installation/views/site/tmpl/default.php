@@ -106,7 +106,7 @@ $this->validateInput();
 
 				<div class="newsection"></div>
 
-				<h4><?php echo JText::_('INSTL_SITE_CONF_TITLE'); ?></h4>
+				<h3><?php echo JText::_('INSTL_SITE_CONF_TITLE'); ?></h3>
 				<div class="install-text">
 					<?php echo JText::_('INSTL_SITE_CONF_DESC'); ?>
 				</div>
